@@ -104,7 +104,7 @@ const ReportPopUp: React.FC<ReportPopUpProps> = ({
           {reportReasons.map((report) => (
             <div
               onClick={() => setSelectedValue(report.value as RadioValue)}
-              className="flex mt-6"
+              className="flex mt-6 cursor-pointer"
               key={report.value}
             >
               <>
