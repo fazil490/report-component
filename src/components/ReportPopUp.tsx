@@ -6,7 +6,7 @@ type RadioValue =
   | "incorrect_information"
   | "duplicate_listing"
   | "inappropriate_content"
-  | "fraudulent-listing"
+  | "fraudulent_listing"
   | "other";
 
 type OtherReasonValue = string;
@@ -30,7 +30,7 @@ const reportReasons = [
   {
     reason: "Fraudulent Listing",
     description: "I suspect this listing is a scam or fraudulent",
-    value: "fraudulent-listing",
+    value: "fraudulent_listing",
   },
   {
     reason: "Other",
@@ -103,7 +103,7 @@ const ReportPopUp: React.FC<ReportPopUpProps> = ({
         <div className="md:ml-4 lg:ml-10">
           {reportReasons.map((report) => (
             <div
-              onClick={() => setSelectedValue(report.value)}
+              onClick={() => setSelectedValue(report.value as RadioValue)}
               className="flex mt-6"
               key={report.value}
             >
